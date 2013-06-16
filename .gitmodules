@@ -1,3 +1,0 @@
-[submodule "src/Softlabs/XeroLaravel/PHP-Xero"]
-	path = src/Softlabs/XeroLaravel/PHP-Xero
-	url = https://github.com/XeroAPI/PHP-Xero
