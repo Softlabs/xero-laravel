@@ -1,0 +1,22 @@
+{
+    "name": "Softlabs/xero-laravel",
+    "description": "Xero Service Provider for Laravel 4",
+    "keywords": ["laravel","laravel 4","xero"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Paul Johnston",
+            "email": "paul@softlabs.co.uk"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.0.x"
+    },
+    "autoload": {
+        "psr-0": {
+            "Softlabs\\XeroLaravel": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
