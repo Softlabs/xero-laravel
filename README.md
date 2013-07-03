@@ -16,6 +16,17 @@ The Xero Service Provider can be installed via [Composer](http://getcomposer.org
 }
 ```
 
+Also you need to add the repository to composer.json:
+
+```json
+"repositories": [
+    {
+        "type": "vcs",
+        "url": "https://github.com/Softlabs/xero-laravel"
+    }
+]
+```
+
 ## Usage
 
 To use the Xero Service Provider, you must register the provider when bootstrapping your Laravel application.
