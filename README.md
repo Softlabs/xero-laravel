@@ -20,10 +20,10 @@ Also you need to add the repository to composer.json:
 
 ```json
 "repositories": [
-    {
-        "type": "vcs",
-        "url": "https://github.com/Softlabs/xero-laravel"
-    }
+    {
+        "type": "vcs",
+        "url": "https://github.com/Softlabs/xero-laravel"
+    }
 ]
 ```
 
