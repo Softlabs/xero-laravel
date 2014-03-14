@@ -79,8 +79,7 @@ $contact = array(
 	)
 );
 
-$xero = new XeroLaravel();
-$xero_contact = $xero->Contacts($contact);
+$xero_contact = XeroLaravel::Contacts($contact);
 ```
 
 ## Reference
