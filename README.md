@@ -58,7 +58,7 @@ Find the `aliases` key in `app/config/app.php` and add in our `Xero` alias.
 ```php
     'aliases' => array(
         // ...
-        'Xero' 	  => 'Softlabs\XeroLaravel\Facades\XeroLaravel',
+        'XeroLaravel' 	  => 'Softlabs\XeroLaravel\Facades\XeroLaravel',
     )
 ```
 
