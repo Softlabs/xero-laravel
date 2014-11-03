@@ -2,6 +2,13 @@
 
 A simple [Laravel 4](http://laravel.com) service provider for including the [PHP Xero API](https://github.com/XeroAPI/PHP-Xero).
 
+No longer maintained
+------------
+Please note the PHP-Xero wrapper library used by this service provider is no longer under active development.
+All development effort is going into the [XeroOAuth-PHP library](https://github.com/XeroAPI/XeroOAuth-PHP).
+
+We will review this after Laravel 5 has been released and likely leave this active (but unsupported) for anyone still using it for their Laravel 4 apps.
+
 ## Installation
 
 The Xero Service Provider can be installed via [Composer](http://getcomposer.org) by requiring the `Softlabs/xero-laravel` package and setting the `minimum-stability` to `dev` in your project's `composer.json`.
@@ -9,8 +16,8 @@ The Xero Service Provider can be installed via [Composer](http://getcomposer.org
 ```json
 {
 	"require": {
-		"laravel/framework": "4.0.*",
-		"Softlabs/xero-laravel": "1.*"
+		"laravel/framework": ">=4.1,<5.0",
+		"Softlabs/xero-laravel": "2.*"
 	},
 	"minimum-stability": "dev"
 }
@@ -40,7 +47,8 @@ return array(
     'key'           => '<your-xero-key>',
     'secret'        => '<your-xero-secret>',
     'publicPath'    => '../app/config/xero/publickey.cer',
-    'privatePath'   => '../app/config/xero/privatekey.pem'
+    'privatePath'   => '../app/config/xero/privatekey.pem',
+    'format'        => 'json'
 );
 ```
 

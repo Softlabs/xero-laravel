@@ -1,6 +1,11 @@
 PHP-Xero PHP Wrapper
 ====================
 
+No longer maintained
+------------
+Please note the PHP-Xero wrapper library is no longer under active development.
+All development effort is going into the [XeroOAuth-PHP library](https://github.com/XeroAPI/XeroOAuth-PHP).
+
 Introduction
 ------------
 A class for interacting with the xero (xero.com) private application API.  It could also be used for the public application API too, but it hasn't been tested with that.  More documentation for Xero can be found at http://blog.xero.com/developer/api-overview/  It is suggested you become familiar with the API before using this class, otherwise it may not make much sense to you - http://blog.xero.com/developer/api/
