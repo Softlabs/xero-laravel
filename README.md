@@ -1,6 +1,6 @@
-# Xero Service Provider for Laravel 4
+# Xero Service Provider for Laravel 5
 
-A simple [Laravel 4](http://laravel.com) service provider for including the [PHP Xero API](https://github.com/XeroAPI/PHP-Xero).
+A simple [Laravel 5](http://laravel.com) service provider for including the [PHP Xero API](https://github.com/XeroAPI/PHP-Xero).
 
 No longer maintained
 ------------
@@ -15,11 +15,11 @@ The Xero Service Provider can be installed via [Composer](http://getcomposer.org
 
 ```json
 {
-	"require": {
-		"laravel/framework": ">=4.1,<5.0",
-		"Softlabs/xero-laravel": "2.*"
-	},
-	"minimum-stability": "dev"
+    "require": {
+        "laravel/framework": ">=4.1,<5.0",
+        "Softlabs/xero-laravel": "2.*"
+    },
+    "minimum-stability": "dev"
 }
 ```
 
@@ -43,31 +43,31 @@ To use the Xero Service Provider, you must register the provider when bootstrapp
 Create a new `app/config/xero.php` configuration file with the following options:
 
 ```php
-return array(
+return [
     'key'           => '<your-xero-key>',
     'secret'        => '<your-xero-secret>',
     'publicPath'    => '../app/config/xero/publickey.cer',
     'privatePath'   => '../app/config/xero/privatekey.pem',
     'format'        => 'json'
-);
+];
 ```
 
 Find the `providers` key in `app/config/app.php` and register the Xero Service Provider.
 
 ```php
-    'providers' => array(
+    'providers' => [
         // ...
         'Softlabs\XeroLaravel\XeroLaravelServiceProvider',
-    )
+    ]
 ```
 
 Find the `aliases` key in `app/config/app.php` and add in our `Xero` alias.
 
 ```php
-    'aliases' => array(
+    'aliases' => [
         // ...
-        'XeroLaravel' 	  => 'Softlabs\XeroLaravel\Facades\XeroLaravel',
-    )
+        'XeroLaravel'     => 'Softlabs\XeroLaravel\Facades\XeroLaravel',
+    ]
 ```
 
 ### Setting up the application
@@ -79,13 +79,13 @@ For more info on setting up your keys, check out the [Xero documentation](http:/
 ## Example Usage
 
 ```
-$contact = array(
-    array(
-       	"Name"        => $user['company']['name'],
-       	"FirstName"   => $user['firstname'],
-		"LastName"    => $user['surname'],
-	)
-);
+$contact = [
+    [
+        "Name"        => $user['company']['name'],
+        "FirstName"   => $user['firstname'],
+        "LastName"    => $user['surname'],
+    ]
+];
 
 $xero_contact = XeroLaravel::Contacts($contact);
 ```
