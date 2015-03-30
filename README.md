@@ -11,15 +11,13 @@ We will review this after Laravel 5 has been released and likely leave this acti
 
 ## Installation
 
-The Xero Service Provider can be installed via [Composer](http://getcomposer.org) by requiring the `Softlabs/xero-laravel` package and setting the `minimum-stability` to `dev` in your project's `composer.json`.
+The Xero Service Provider can be installed via [Composer](http://getcomposer.org) by requiring the `Softlabs/xero-laravel` package in your project's `composer.json`.
 
 ```json
 {
     "require": {
-        "laravel/framework": ">=4.1,<5.0",
-        "Softlabs/xero-laravel": "2.*"
+        "Softlabs/xero-laravel": "3.*"
     },
-    "minimum-stability": "dev"
 }
 ```
 
@@ -40,19 +38,19 @@ To use the Xero Service Provider, you must register the provider when bootstrapp
 
 ### Use Laravel Configuration
 
-Create a new `app/config/xero.php` configuration file with the following options:
+Create a new `config/xero.php` configuration file with the following options:
 
 ```php
 return [
     'key'           => '<your-xero-key>',
     'secret'        => '<your-xero-secret>',
-    'publicPath'    => '../app/config/xero/publickey.cer',
-    'privatePath'   => '../app/config/xero/privatekey.pem',
+    'publicPath'    => '../config/xero/publickey.cer',
+    'privatePath'   => '../config/xero/privatekey.pem',
     'format'        => 'json'
 ];
 ```
 
-Find the `providers` key in `app/config/app.php` and register the Xero Service Provider.
+Find the `providers` key in `config/app.php` and register the Xero Service Provider.
 
 ```php
     'providers' => [
@@ -61,7 +59,7 @@ Find the `providers` key in `app/config/app.php` and register the Xero Service P
     ]
 ```
 
-Find the `aliases` key in `app/config/app.php` and add in our `Xero` alias.
+Find the `aliases` key in `config/app.php` and add in our `Xero` alias.
 
 ```php
     'aliases' => [
@@ -72,7 +70,7 @@ Find the `aliases` key in `app/config/app.php` and add in our `Xero` alias.
 
 ### Setting up the application
 
-Create public and private keys, and save them in /app/config/xero/ as publickey.cer and privatekey.pem.
+Create public and private keys, and save them in /config/xero/ as publickey.cer and privatekey.pem.
 
 For more info on setting up your keys, check out the [Xero documentation](http://developer.xero.com/documentation/advanced-docs/public-private-keypair/)
 
