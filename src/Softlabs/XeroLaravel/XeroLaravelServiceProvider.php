@@ -21,10 +21,11 @@ class XeroLaravelServiceProvider extends ServiceProvider {
      */
     public function register()
     {
-        $this->app['xero'] = $this->app->share(function($app)
-        {
+        $this->app->singleton('xero', function ($app) {
             ClassLoader::addDirectories(array(__DIR__ . '/PHP-Xero'));
+
             $config = $this->app['config']['xero'];
+
             return new PHPXero($config['key'], $config['secret'], $config['publicPath'], $config['privatePath'], $config['format']);
         });
     }
