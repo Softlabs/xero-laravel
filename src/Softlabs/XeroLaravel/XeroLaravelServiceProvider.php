@@ -1,6 +1,7 @@
-<?php namespace Softlabs\XeroLaravel;
+<?php
+namespace Softlabs\XeroLaravel;
 
-use Illuminate\Support\ClassLoader;
+use ClassLoader;
 use Illuminate\Support\ServiceProvider;
 use Softlabs\XeroLaravel\PHPXero\PHPXero;
 
