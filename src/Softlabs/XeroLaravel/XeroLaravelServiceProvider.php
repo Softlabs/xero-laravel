@@ -1,7 +1,6 @@
 <?php
 namespace Softlabs\XeroLaravel;
 
-use ClassLoader;
 use Illuminate\Support\ServiceProvider;
 use Softlabs\XeroLaravel\PHPXero\PHPXero;
 
@@ -23,8 +22,6 @@ class XeroLaravelServiceProvider extends ServiceProvider {
     public function register()
     {
         $this->app->singleton('xero', function ($app) {
-            ClassLoader::addDirectories(array(__DIR__ . '/PHP-Xero'));
-
             $config = $this->app['config']['xero'];
 
             return new PHPXero($config['key'], $config['secret'], $config['publicPath'], $config['privatePath'], $config['format']);
